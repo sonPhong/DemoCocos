@@ -3,7 +3,7 @@
   "_name": "animPet",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 6.5,
+  "_duration": 5.5,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -19,15 +19,15 @@
           "value": 360
         },
         {
-          "frame": 3.1666666666666665,
+          "frame": 3.5,
           "value": 360
         },
         {
-          "frame": 3.5,
+          "frame": 3.8333333333333335,
           "value": -360
         },
         {
-          "frame": 6.5,
+          "frame": 5.5,
           "value": -360
         }
       ],
@@ -75,11 +75,11 @@
           "value": 255
         },
         {
-          "frame": 3.3333333333333335,
+          "frame": 3.6666666666666665,
           "value": 255
         },
         {
-          "frame": 3.5,
+          "frame": 3.8333333333333335,
           "value": 0
         }
       ]
