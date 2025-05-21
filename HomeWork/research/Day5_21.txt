@@ -1,0 +1,9 @@
+### Research ngày 21-5
+
+1 - Auto Atlas là gì?
++ Auto Atlas là một công cụ gom nhiều ảnh nhỏ (sprites) lại thành một ảnh lớn duy nhất (texture atlas).
+    ==> Tối ưu quá trình render, giảm số lần draw call, cải thiện hiệu năng.
++ Cách hoạt động: nó sẽ gôm tất cả ảnh nhỏ lại tạo thành 1 ảnh to (max 2048) gọi là atlas texture.
+    => hệ thống map từng ảnh nhỏ theo vị trí trong atlas để dùng.
+
+2 - xong auto atlas 
