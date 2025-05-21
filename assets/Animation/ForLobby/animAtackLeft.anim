@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "animAtackLeft",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 4,
+  "sample": 60,
+  "speed": 3,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            -100,
+            150,
+            0
+          ]
+        },
+        {
+          "frame": 1.5,
+          "value": [
+            -30,
+            110,
+            0
+          ]
+        },
+        {
+          "frame": 4,
+          "value": [
+            -30,
+            110,
+            0
+          ]
+        }
+      ],
+      "angle": [
+        {
+          "frame": 0,
+          "value": 180
+        },
+        {
+          "frame": 1.5,
+          "value": 190
+        },
+        {
+          "frame": 4,
+          "value": 190
+        }
+      ]
+    }
+  },
+  "events": []
+}
