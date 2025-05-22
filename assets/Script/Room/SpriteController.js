@@ -34,6 +34,7 @@ cc.Class({
         }else{
             this.nodeSpriteMagic.getComponent(cc.Sprite).spriteFrame = this.img2;
             this.flag = true;
+            //test
         }
 
     },
