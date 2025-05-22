@@ -62,7 +62,7 @@ cc.Class({
         let vol = cc.audioEngine.getVolume(this.playSoundBGM);
         console.log(vol);
         // Math.round(vol += this.upVolumeNew);
-        Math.abs(vol += this.upVolumeNew);
+        vol += this.upVolumeNew;
         console.log(vol);
         cc.audioEngine.setVolume(this.playSoundBGM, vol);
         // console.log("testUp");
@@ -73,7 +73,7 @@ cc.Class({
         let vol = cc.audioEngine.getVolume(this.playSoundBGM);
         console.log(vol);
         // Math.round(vol += this.upVolumeNew);
-        Math.abs(vol -= this.upVolumeNew);
+        vol -= this.upVolumeNew;
         console.log(vol);
         cc.audioEngine.setVolume(this.playSoundBGM, vol);
         console.log("testDown");
