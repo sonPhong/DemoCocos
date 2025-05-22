@@ -25,34 +25,61 @@ cc.Class({
             type: cc.SpriteFrame,
         },
         flag: true,
+
+        nodeRun: {
+            default: null,
+            type: cc.Node,
+        },
+        nodeText: {
+            default: null,
+            type: cc.Node,
+        },
     },
 
-    onChangeSprite(){
+    onChangeSprite() {
         if (this.flag) {
             this.nodeSpriteMagic.getComponent(cc.Sprite).spriteFrame = this.img1;
             this.flag = false;
-        }else{
+        } else {
             this.nodeSpriteMagic.getComponent(cc.Sprite).spriteFrame = this.img2;
             this.flag = true;
             //test
         }
 
     },
-    onChangeSizeSprite(){
+    onChangeSizeSprite() {
         this.nodeSpriteMagic.width = this.nodeSpriteMagic.width * 3;
         this.nodeSpriteMagic.height = this.nodeSpriteMagic.height * 3;
 
     },
 
+    runSprite() {
+        this.nodeRun.runAction(cc.sequence(
+            cc.moveBy(0.5, 200, 0), // (duration , deltaX, deltaY)
+            cc.moveBy(0.5, -200, 0),
+            cc.callFunc(this.runSprite, this)
+        ));
+    },
+
+
+   onChangeText(){
+        let text = this.nodeText.getComponent(cc.Label);
+        text.string = "Hello World";
+        text.fontFamily = "Arial";
+        text.overflow = cc.Label.Overflow.NONE;
+        this.nodeText.color = cc.color(255, 7, 7);
+   },
+
     // LIFE-CYCLE CALLBACKS:
 
-     onLoad () {
-        
-     },
+    onLoad() {
+        this.nodeRun.setPosition(0, 0);
+    },
 
-    start () {
+    start() {
 
     },
 
-    // update (dt) {},
+    update(dt) {
+    },
 });
