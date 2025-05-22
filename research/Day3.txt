@@ -1,0 +1,42 @@
+### Research ngày 22-5
+
+1 - Auto Atlas là gì?
++ Auto Atlas là một công cụ gom nhiều ảnh nhỏ (sprites) lại thành một ảnh lớn duy nhất (texture atlas).
+    ==> Tối ưu quá trình render, giảm số lần draw call, cải thiện hiệu năng.
++ Cách hoạt động: nó sẽ gôm tất cả ảnh nhỏ lại tạo thành 1 ảnh to gọi là atlas texture.
+    => hệ thống map từng ảnh nhỏ theo vị trí trong atlas để dùng.
+    => maxsize: 
+        + 256 × 256	Nhỏ, dùng cho icon đơn giản
+        + 512 × 512	Nhỏ/Trung bình
+        + 1024 × 1024	Trung bình (default phổ biến)
+        + 2048 × 2048 - Lớn, dùng cho nhiều ảnh UI/sprite thông dụng thiết bị
+        + 4096 × 4096 - Rất lớn, chỉ hỗ trợ ở 1 số thiết bị
+        + 8192 × 8192 - Cực lớn (hiếm, không an toàn cho mobile)
+
+2 - Wrap mode, Filter Mode và Premultiply Alpha?
+* Wrap mode:
+    + điều khiển cách ảnh lặp lại hoặc dừng lại khi tọa độ UV (texture coordinate) vượt quá 1.0
+    + có 2 chế độ:
+        - REPEAT: Lặp lại ảnh liên tục như gạch lát nền
+        - CLAMP_TO_EDGE: Kéo giãn pixel ở biên ra ngoài, không lặp lại
+    + ứng dụng: 
+        - REPEAT: thường dùng khi làm nền scrolling, hiệu ứng lặp ảnh động (VD: mặt nước, sao trời…).
+        - LAMP_TO_EDGE: dùng khi ảnh không được phép bị lặp lại, như UI, sprite tĩnh.
+
+* Filter mode:
+    + quyết định cách ảnh được hiển thị khi bị phóng to/thu nhỏ (scale)
+    + có 2 chế độ:
+        - POINT (Nearest): Không làm mịn ảnh, giữ pixel vuông gốc. Ảnh bị răng cưa khi phóng to
+        - LINEAR: Làm mịn ảnh khi scale. Ảnh nhìn mịn và mềm hơn
+    + ứng dụng: 
+        - POINT: dùng khi làm game pixel art hoặc cần giữ nguyên từng ô pixel
+        - LINEAR: dùng cho game hiện đại, hình ảnh đẹp, smooth UI
+
+* Premultiply Alpha:
+    + là kỹ thuật nén ảnh, màu RGB được nhân trước với giá trị Alpha. Giúp ảnh trong suốt hiển thị mượt hơn, nhất là ở viền ảnh.
+    + ví dụ: ảnh gốc (R: 255, G: 255, B: 255, A: 0.5) ===> ảnh nén (R: 127, G: 127, B: 127, A: 0.5)
+    + ứng dụng:
+        - Ảnh có viền mờ/transparency mềm ==> giúp blend đẹp hơn
+        - Render UI/phông nền mềm
+        - Ảnh pixel art thì không cần dùng
+    
