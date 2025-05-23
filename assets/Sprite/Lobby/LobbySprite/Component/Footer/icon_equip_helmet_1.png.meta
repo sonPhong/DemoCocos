@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "7d11f447-e1ce-4701-8deb-e948f3d57a04",
+  "uuid": "bdd8dc3a-f610-494d-9d1c-2f29185f658c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_equip_helmet_1": {
       "ver": "1.0.4",
-      "uuid": "fec70499-37b2-4e7d-bb67-1ed3d3571461",
-      "rawTextureUuid": "7d11f447-e1ce-4701-8deb-e948f3d57a04",
+      "uuid": "42789aa6-4118-4dd2-ba57-bae12cd57790",
+      "rawTextureUuid": "bdd8dc3a-f610-494d-9d1c-2f29185f658c",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

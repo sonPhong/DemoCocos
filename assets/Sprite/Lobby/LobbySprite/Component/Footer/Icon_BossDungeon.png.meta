@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "629f9a9c-ba22-4332-aeb2-8bd2df8ad2cf",
+  "uuid": "d606e974-b0cd-4b33-b37d-48379e9d896e",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "Icon_BossDungeon": {
       "ver": "1.0.4",
-      "uuid": "668de57c-3663-4699-976a-6874d79166c9",
-      "rawTextureUuid": "629f9a9c-ba22-4332-aeb2-8bd2df8ad2cf",
+      "uuid": "cc0754b7-e8ca-45ff-8c55-abba95fdd074",
+      "rawTextureUuid": "d606e974-b0cd-4b33-b37d-48379e9d896e",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

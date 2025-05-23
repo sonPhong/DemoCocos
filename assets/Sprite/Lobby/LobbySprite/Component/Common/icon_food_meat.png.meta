@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "f306d72d-1172-4834-9c58-cc4015e03cda",
+  "uuid": "ab3e0d2e-4ae2-426e-bc59-6cee692eadac",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_food_meat": {
       "ver": "1.0.4",
-      "uuid": "44f9ee66-3cfe-42a3-9e2f-d3d07b05c23f",
-      "rawTextureUuid": "f306d72d-1172-4834-9c58-cc4015e03cda",
+      "uuid": "f833cce9-241f-4cf0-8ffa-a5f58d106359",
+      "rawTextureUuid": "ab3e0d2e-4ae2-426e-bc59-6cee692eadac",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

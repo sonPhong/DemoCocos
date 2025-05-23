@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "1ffc1222-ca26-461a-a810-18670479938a",
+  "uuid": "dc845c0e-a69b-4610-92c0-9864d19cf6fb",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "StageFrame_06_FocusBackGlow": {
       "ver": "1.0.4",
-      "uuid": "9c9eaa1a-f90e-4aef-a3c4-9d794088bab9",
-      "rawTextureUuid": "1ffc1222-ca26-461a-a810-18670479938a",
+      "uuid": "aa4a8e26-77cc-43fb-8bcd-af4a2187150a",
+      "rawTextureUuid": "dc845c0e-a69b-4610-92c0-9864d19cf6fb",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

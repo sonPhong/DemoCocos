@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "a8f25e13-5dd5-4f10-b5c7-edb0676767e9",
+  "uuid": "dc9da2f6-da73-4be6-8323-9f686abd4c1f",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_country_flag_ukr": {
       "ver": "1.0.4",
-      "uuid": "357bf215-174f-4aff-866c-6f4ba58e1474",
-      "rawTextureUuid": "a8f25e13-5dd5-4f10-b5c7-edb0676767e9",
+      "uuid": "6861d4e4-e249-41d1-82e3-5a4022df57c5",
+      "rawTextureUuid": "dc9da2f6-da73-4be6-8323-9f686abd4c1f",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

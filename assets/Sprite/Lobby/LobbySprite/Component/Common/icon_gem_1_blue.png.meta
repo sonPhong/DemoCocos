@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "d917ffde-7884-45fa-96a5-6a5415688043",
+  "uuid": "2dfbf23a-f1d9-46d0-b0a1-7c00577130da",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_gem_1_blue": {
       "ver": "1.0.4",
-      "uuid": "d1185867-579b-4397-87e9-f8952784b2d1",
-      "rawTextureUuid": "d917ffde-7884-45fa-96a5-6a5415688043",
+      "uuid": "a8806915-7e1a-4ff4-a315-e918187391d4",
+      "rawTextureUuid": "2dfbf23a-f1d9-46d0-b0a1-7c00577130da",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

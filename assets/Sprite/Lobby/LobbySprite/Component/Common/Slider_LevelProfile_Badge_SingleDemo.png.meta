@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "797d4d20-8a0c-418c-87c6-6adbea49b0e5",
+  "uuid": "bbfaac08-efee-4d47-bbb2-65a964e899b1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "Slider_LevelProfile_Badge_SingleDemo": {
       "ver": "1.0.4",
-      "uuid": "852f923f-12d7-47b9-83bc-ce436f75d6d9",
-      "rawTextureUuid": "797d4d20-8a0c-418c-87c6-6adbea49b0e5",
+      "uuid": "5affc42f-725a-4a0c-9a5f-2e537eaad688",
+      "rawTextureUuid": "bbfaac08-efee-4d47-bbb2-65a964e899b1",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

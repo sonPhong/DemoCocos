@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "b6e71da8-a8ce-4dd7-8862-4ca15834c8bb",
+  "uuid": "69300462-94bd-460f-94cc-118b322b246f",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "BackGround_Sample_01_Title_1920": {
       "ver": "1.0.4",
-      "uuid": "310ff434-f5e9-441f-87ff-dc0c1602804d",
-      "rawTextureUuid": "b6e71da8-a8ce-4dd7-8862-4ca15834c8bb",
+      "uuid": "66ae30f1-b987-4e15-a3d4-d9b2581d2ce4",
+      "rawTextureUuid": "69300462-94bd-460f-94cc-118b322b246f",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

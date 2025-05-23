@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "7fb18e68-b000-4711-b4f2-342ca78f55fc",
+  "uuid": "afdec36e-44ff-4359-a6d2-b18c88191fa4",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_guild_flag_0": {
       "ver": "1.0.4",
-      "uuid": "3fa3f952-9380-4277-8758-de02a6993632",
-      "rawTextureUuid": "7fb18e68-b000-4711-b4f2-342ca78f55fc",
+      "uuid": "a356ad1d-c411-4c25-92ce-ec80704f1e19",
+      "rawTextureUuid": "afdec36e-44ff-4359-a6d2-b18c88191fa4",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

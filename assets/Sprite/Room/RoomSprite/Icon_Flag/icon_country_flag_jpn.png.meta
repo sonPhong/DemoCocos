@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "6f9e5df7-2527-4790-bfad-4a82af6acce8",
+  "uuid": "7fa960e7-396f-4e25-9593-d8d1cbd226be",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_country_flag_jpn": {
       "ver": "1.0.4",
-      "uuid": "7b8c0811-d934-45a1-bb80-6d1723975d52",
-      "rawTextureUuid": "6f9e5df7-2527-4790-bfad-4a82af6acce8",
+      "uuid": "a4764758-abbd-4001-bb07-3ee963c9b06f",
+      "rawTextureUuid": "7fa960e7-396f-4e25-9593-d8d1cbd226be",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "b8e9c58b-7162-45e3-a8fe-0e4db40eedeb",
+  "uuid": "937f6962-5124-4888-a213-741a6e8f3d16",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_country_flag_rus": {
       "ver": "1.0.4",
-      "uuid": "4d388b6e-7de1-4551-88ba-d92d0fbd341e",
-      "rawTextureUuid": "b8e9c58b-7162-45e3-a8fe-0e4db40eedeb",
+      "uuid": "f4d29ce5-cdb9-4fcb-9e9f-92c535d7ed5f",
+      "rawTextureUuid": "937f6962-5124-4888-a213-741a6e8f3d16",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "8c898f7b-60a9-4701-a57f-7a0a7648dd2b",
+  "uuid": "48a4d3c5-5373-4d88-aadf-4269d814c04c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_country_flag_tur": {
       "ver": "1.0.4",
-      "uuid": "d29ef776-7d7f-4f02-a50c-a5a63ca2aee2",
-      "rawTextureUuid": "8c898f7b-60a9-4701-a57f-7a0a7648dd2b",
+      "uuid": "a75a80a8-43d7-4843-aca9-0a3c9f284cd3",
+      "rawTextureUuid": "48a4d3c5-5373-4d88-aadf-4269d814c04c",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

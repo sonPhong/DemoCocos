@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "ecdb9563-ddbb-410f-b1de-05c78c5e8cc7",
+  "uuid": "1a1f6aff-a87e-4339-97d1-2c95ecc3ca77",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "TabMenu_03_Yellow": {
       "ver": "1.0.4",
-      "uuid": "95c4a409-58cd-4ffe-8e57-4a628d370fa3",
-      "rawTextureUuid": "ecdb9563-ddbb-410f-b1de-05c78c5e8cc7",
+      "uuid": "a0e60275-18ba-4f73-a8d6-71f1905a1413",
+      "rawTextureUuid": "1a1f6aff-a87e-4339-97d1-2c95ecc3ca77",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

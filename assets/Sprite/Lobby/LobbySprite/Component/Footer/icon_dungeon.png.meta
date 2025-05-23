@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "8b75565d-6788-44f9-a53b-c7013e2eba76",
+  "uuid": "0ea3d34c-f80f-4634-a579-964366846bf3",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_dungeon": {
       "ver": "1.0.4",
-      "uuid": "80ee2e16-aed1-4675-aaf3-27fb624845f5",
-      "rawTextureUuid": "8b75565d-6788-44f9-a53b-c7013e2eba76",
+      "uuid": "16153f47-d46f-4325-9210-ec772cffe41e",
+      "rawTextureUuid": "0ea3d34c-f80f-4634-a579-964366846bf3",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "8e7c7d80-fcc7-4541-a66d-c3b80a4b2a58",
+  "uuid": "43e1c7d7-7f1d-45f3-abbc-c720275dd0d2",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_country_flag_prt_1": {
       "ver": "1.0.4",
-      "uuid": "81813124-a29c-4403-b03c-505bff1c83e2",
-      "rawTextureUuid": "8e7c7d80-fcc7-4541-a66d-c3b80a4b2a58",
+      "uuid": "dd7c98c2-364a-4487-a4af-b9ca169f05cd",
+      "rawTextureUuid": "43e1c7d7-7f1d-45f3-abbc-c720275dd0d2",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

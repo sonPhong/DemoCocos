@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "989cbed2-25ee-4733-8302-536c4a02ecbf",
+  "uuid": "6058c0db-21ba-4834-b15d-e0ba7a1e98ea",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "Slider_StageHorizontal_Icon_Lock": {
       "ver": "1.0.4",
-      "uuid": "aa7706b0-114d-40cf-ad77-2a923e8a19d9",
-      "rawTextureUuid": "989cbed2-25ee-4733-8302-536c4a02ecbf",
+      "uuid": "37927319-05e2-4ad3-bc8a-c1c46a042433",
+      "rawTextureUuid": "6058c0db-21ba-4834-b15d-e0ba7a1e98ea",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

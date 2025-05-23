@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "364d2bd1-8066-420b-af60-8119588624c9",
+  "uuid": "5955f592-2c42-4433-ac37-678056559c7c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_equip_sword": {
       "ver": "1.0.4",
-      "uuid": "c6cf415f-21ac-4c7a-ba24-ee8d2b42b443",
-      "rawTextureUuid": "364d2bd1-8066-420b-af60-8119588624c9",
+      "uuid": "44245c5d-6f10-4d19-a5b9-42e4d9a2da8b",
+      "rawTextureUuid": "5955f592-2c42-4433-ac37-678056559c7c",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

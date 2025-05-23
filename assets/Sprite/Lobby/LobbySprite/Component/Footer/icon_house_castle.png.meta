@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "87bfe20b-181f-4694-972e-a36b4a89daa6",
+  "uuid": "4ec338c3-cc84-4709-b0a8-b51ecfb8d14c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "icon_house_castle": {
       "ver": "1.0.4",
-      "uuid": "e1615b12-f5f3-418b-96ce-26f325efdba4",
-      "rawTextureUuid": "87bfe20b-181f-4694-972e-a36b4a89daa6",
+      "uuid": "7d39a4c8-66d1-46e3-8e93-c0c8be268244",
+      "rawTextureUuid": "4ec338c3-cc84-4709-b0a8-b51ecfb8d14c",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

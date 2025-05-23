@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "72374045-e36c-42ea-95a5-3f1db3ed5878",
+  "uuid": "277ce4b9-6abf-4485-8925-425d33539785",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "LineTextFrame_04_Demo_Icon": {
       "ver": "1.0.4",
-      "uuid": "5540b98e-0477-4ce1-87f3-70b4f5810df0",
-      "rawTextureUuid": "72374045-e36c-42ea-95a5-3f1db3ed5878",
+      "uuid": "972ca622-edf4-4dc5-9db6-676eb1bc6673",
+      "rawTextureUuid": "277ce4b9-6abf-4485-8925-425d33539785",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
