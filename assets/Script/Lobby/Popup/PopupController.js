@@ -1,28 +1,32 @@
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        PopupSetting: require('PopupItem'),
-        PopupRank: require('PopupItem'),
+        popupSetting: require('PopupItem'),
+        popupRank: require('PopupItem'),
     },
 
     showSetting() {
-        this.PopupSetting.show();
+        this.onHidePopup();
+        this.popupSetting.show();
     },
 
     hideSetting() {
-        this.PopupSetting.hide();
+        this.popupSetting.hide();
     },
 
     showRank() {
-        this.PopupRank.show();
+        this.onHidePopup();
+        this.popupRank.show();
     },
 
     hideRank() {
-        this.PopupRank.hide();
+        this.popupRank.hide();
     },
 
-
+    onHidePopup(){
+        this.hideSetting();
+        this.hideRank();
+    },
 
 });

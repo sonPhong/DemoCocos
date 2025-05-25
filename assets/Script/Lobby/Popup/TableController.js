@@ -1,33 +1,32 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        PrefabsCell: cc.Prefab,
-        LayoutTable: cc.Layout,
+        prefabCell: cc.Prefab,
+        layoutTable: cc.Layout,
     },
 
-    onLoad(){
-        let prefabs = [];
-        const fakeData = ['1','2','3','4','5','6','7','8','9','10'];
-        for(let i = 0; i<5; i++){
-            let prefabCell = cc.instantiate(this.PrefabsCell);
-            prefabCell.parent = this.LayoutTable.node;
-            prefabs.push(prefabCell);
+    onLoad() {
+        const fakeData = [
+            { name: 'Alice', idrank: 1, rank: 'Bronze' },
+            { name: 'Bob', idrank: 2, rank: 'Silver' },
+            { name: 'Charlie', idrank: 3, rank: 'Gold' },
+            { name: 'David', idrank: 4, rank: 'Platinum' },
+            { name: 'Eve', idrank: 5, rank: 'Diamond' },
+            { name: 'Frank', idrank: 6, rank: 'Master' },
+            { name: 'Grace', idrank: 7, rank: 'Grandmaster' },
+            { name: 'Hank', idrank: 8, rank: 'Legend' },
+            { name: 'Ivy', idrank: 9, rank: 'Mythic' },
+            { name: 'Jack', idrank: 10, rank: 'Immortal' }
+        ];
+
+        for (let i = 0; i < fakeData.length; i++) {
+            let cell = cc.instantiate(this.prefabCell);
+            cell.parent = this.layoutTable.node;
+            const data = fakeData[i];
+            cell.getChildByName('Text').getComponent(cc.Label).string = `${data.name} ${data.idrank} ${data.rank}`;
         };
 
-        fakeData.foreach((data,index) => {
-            prefabs[index].getChildByName('Text').getComponent(cc.Label).string = data;
-        });
     },
-    
+
 });

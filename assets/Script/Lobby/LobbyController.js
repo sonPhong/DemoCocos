@@ -4,24 +4,39 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        PopupController: require('PopupController'),
+        popupController: require('PopupController'),
+        loginLayout: cc.Node,
+        lobbyLayout: cc.Node,
+    },
+    onLoad() {
+       this.lobbyLayout.active = true;
+       this.loginLayout.active = false;
     },
 
-    showSetting(){
-        this.PopupController.showSetting();
+    showSetting() {
+        this.popupController.showSetting();
     },
 
-    hideSetting(){
-        this.PopupController.hideSetting();
-    },
-    
-    showRank(){
-        this.PopupController.showRank();
+    hideSetting() {
+        this.popupController.hideSetting();
     },
 
-    hideRank(){
-        this.PopupController.hideRank();
+    showRank() {
+        this.popupController.showRank();
     },
-    
-    
+
+    hideRank() {
+        this.popupController.hideRank();
+    },
+
+    login() {
+        if (this.lobbyLayout.active) {
+            this.loginLayout.active = true;
+            this.lobbyLayout.active = false;
+            this.popupController.onHidePopup();
+        } else {
+            this.loginLayout.active = false;
+            this.lobbyLayout.active = true;
+        }
+    },
 });
