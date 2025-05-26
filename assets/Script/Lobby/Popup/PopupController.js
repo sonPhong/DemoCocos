@@ -28,5 +28,4 @@ cc.Class({
         this.hideSetting();
         this.hideRank();
     },
-
 });

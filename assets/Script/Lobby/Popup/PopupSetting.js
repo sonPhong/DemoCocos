@@ -34,5 +34,4 @@ cc.Class({
     openGoogle() {
         window.open('https://google.com', '_blank');
     }
-
 });
