@@ -4,39 +4,57 @@ cc.Class({
     properties: {
         prefabCell: cc.Prefab,
         layoutTable: cc.Layout,
-        platinum: cc.SpriteFrame,
-        diamond: cc.SpriteFrame,
-        gold: cc.SpriteFrame,
-        silver: cc.SpriteFrame,
-        bronze: cc.SpriteFrame,
+        cellList: [cc.Node],
+        scrollView: cc.ScrollView,
     },
 
     onLoad() {
         this._super();
-        const fakeData = this.getFakeData();
-        const rankSpriteMap = this.getRankSpriteMap();
-
-        fakeData.sort((a, b) => b.idRank - a.idRank);
-
-        fakeData.forEach(data => {
-            const cell = cc.instantiate(this.prefabCell);
-            cell.parent = this.layoutTable.node;
-
-            this.setCellData(cell, data, rankSpriteMap.get(data.idRank));
-        });
+        this.initCells();
+        
     },
+
+    initCells() {
+        this.cellList = [];
+        for (let i = 0; i < 10; i++) {
+            let cell = cc.instantiate(this.prefabCell);
+            cell.parent = this.layoutTable.node;
+            this.cellList.push(cell);
+        }
+    },
+
+    initTopRank() {
+        const topRankData = this.getTopRankData(10);
+
+        this.cellList.forEach((cell, index) => {
+            const data = topRankData[index];
+            const cellScript = cell.getComponent('CellController');
+
+            if (cellScript && data) {
+                cellScript.updateData(data);
+            }
+        });
+
+        this.scrollView.scrollToTop(0);
+    },
+
+    getTopRankData(limitData) {
+        return this.getFakeData().sort((a, b) => b.idRank - a.idRank).slice(0, limitData);
+    },
+
+
     getFakeData() {
         return [
             { name: 'An', idRank: 3, rank: 'Gold' },
-            { name: 'Bình', idRank: 5, rank: 'Diamond' },
+            { name: 'Bình', idRank: 2, rank: 'Silver' },
             { name: 'Chi', idRank: 1, rank: 'Bronze' },
             { name: 'Dũng', idRank: 2, rank: 'Silver' },
             { name: 'Hà', idRank: 4, rank: 'Platinum' },
             { name: 'Lan', idRank: 1, rank: 'Bronze' },
-            { name: 'Minh', idRank: 3, rank: 'Gold' },
+            { name: 'Minh', idRank: 1, rank: 'Bronze' },
             { name: 'Ngọc', idRank: 5, rank: 'Diamond' },
             { name: 'Quân', idRank: 2, rank: 'Silver' },
-            { name: 'Trang', idRank: 4, rank: 'Platinum' },
+            { name: 'Trang', idRank: 1, rank: 'Bronze' },
             { name: 'Hưng', idRank: 2, rank: 'Silver' },
             { name: 'Thảo', idRank: 3, rank: 'Gold' },
             { name: 'Vân', idRank: 1, rank: 'Bronze' },
@@ -54,22 +72,4 @@ cc.Class({
             { name: 'Trâm', idRank: 5, rank: 'Diamond' }
         ];
     },
-    getRankSpriteMap() {
-        return new Map([
-            [5, this.platinum],
-            [4, this.diamond],
-            [3, this.gold],
-            [2, this.silver],
-            [1, this.bronze],
-        ])
-    },
-    setCellData(cell, data, spriteFrame) {
-        const nameLabel = cell.getChildByName('Name').getComponent(cc.Label);
-        const rankLabel = cell.getChildByName('Rank').getComponent(cc.Label);
-        const sprite = cell.getChildByName('Sprite').getComponent(cc.Sprite);
-
-        nameLabel.string = data.name;
-        rankLabel.string = data.rank;
-        sprite.spriteFrame = spriteFrame || null;
-    }
 });

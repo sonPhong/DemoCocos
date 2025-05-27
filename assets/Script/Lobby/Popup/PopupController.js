@@ -16,6 +16,7 @@ cc.Class({
     },
 
     showRank() {
+        this.popupRank.initTopRank();
         this.onHidePopup();
         this.popupRank.show();
     },
@@ -24,7 +25,7 @@ cc.Class({
         this.popupRank.hide();
     },
 
-    onHidePopup(){
+    onHidePopup() {
         this.hideSetting();
         this.hideRank();
     },

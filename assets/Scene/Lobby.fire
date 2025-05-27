@@ -153,7 +153,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 623.5382907247958
+      "z": 536.9357503463519
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -13044,20 +13044,9 @@
     "layoutTable": {
       "__id__": 285
     },
-    "platinum": {
-      "__uuid__": "179a70bc-dd81-4b8a-abb2-02b2cc58f72f"
-    },
-    "diamond": {
-      "__uuid__": "ab0395f3-51cf-4192-b623-af03dc37f878"
-    },
-    "gold": {
-      "__uuid__": "5f7c0877-94d7-4871-b11c-7ded57e186ef"
-    },
-    "silver": {
-      "__uuid__": "a244f6b2-d67f-4ef9-bc71-95b662e58edb"
-    },
-    "bronze": {
-      "__uuid__": "7afacda2-5a00-4ba7-82e4-4c80ee1da170"
+    "cellList": [],
+    "scrollView": {
+      "__id__": 286
     },
     "_id": "35cXAO6qtMd7gw7qsR2NKS"
   },
