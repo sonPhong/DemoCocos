@@ -5,11 +5,13 @@ cc.Class({
         prefabCell: cc.Prefab,
         layoutTable: cc.Layout,
         cellList: [cc.Node],
+        scrollView: cc.ScrollView,
     },
 
     onLoad() {
         this._super();
         this.initCells();
+        
     },
 
     initCells() {
@@ -32,6 +34,8 @@ cc.Class({
                 cellScript.updateData(data);
             }
         });
+
+        this.scrollView.scrollToTop(0);
     },
 
     getTopRankData(limitData) {

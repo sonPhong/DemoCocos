@@ -12,15 +12,10 @@ cc.Class({
         bronze: cc.SpriteFrame,
     },
 
-    // onLoad() {
-    //     this.rankSpriteMap = this.getRankSpriteMap();
-    // },
-
     updateData(data) {
         const rankSpriteMap = this.getRankSpriteMap();
         this.nameLabel.string = data.name;
         this.rankLabel.string = data.rank;
-        // console.log('idRank:', data.idRank, '-> sprite:', rankSpriteMap.get(data.idRank));
         this.sprite.spriteFrame = rankSpriteMap.get(data.idRank) || null;
     },
 

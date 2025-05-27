@@ -153,7 +153,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 623.5382907247958
+      "z": 536.9357503463519
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -13044,8 +13044,9 @@
     "layoutTable": {
       "__id__": 285
     },
-    "cellControl": {
-      "__uuid__": "ac41e4c8-3f13-45f3-ae9b-13baab07c3a3"
+    "cellList": [],
+    "scrollView": {
+      "__id__": 286
     },
     "_id": "35cXAO6qtMd7gw7qsR2NKS"
   },
