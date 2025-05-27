@@ -35,22 +35,22 @@ cc.Class({
     },
 
     getTopRankData(limitData) {
-        return this.getFakeData().sort((a, b) => b.idRank).slice(0, limitData);
+        return this.getFakeData().sort((a, b) => b.idRank - a.idRank).slice(0, limitData);
     },
 
 
     getFakeData() {
         return [
             { name: 'An', idRank: 3, rank: 'Gold' },
-            { name: 'Bình', idRank: 5, rank: 'Diamond' },
+            { name: 'Bình', idRank: 2, rank: 'Silver' },
             { name: 'Chi', idRank: 1, rank: 'Bronze' },
             { name: 'Dũng', idRank: 2, rank: 'Silver' },
             { name: 'Hà', idRank: 4, rank: 'Platinum' },
             { name: 'Lan', idRank: 1, rank: 'Bronze' },
-            { name: 'Minh', idRank: 3, rank: 'Gold' },
+            { name: 'Minh', idRank: 1, rank: 'Bronze' },
             { name: 'Ngọc', idRank: 5, rank: 'Diamond' },
             { name: 'Quân', idRank: 2, rank: 'Silver' },
-            { name: 'Trang', idRank: 4, rank: 'Platinum' },
+            { name: 'Trang', idRank: 1, rank: 'Bronze' },
             { name: 'Hưng', idRank: 2, rank: 'Silver' },
             { name: 'Thảo', idRank: 3, rank: 'Gold' },
             { name: 'Vân', idRank: 1, rank: 'Bronze' },
