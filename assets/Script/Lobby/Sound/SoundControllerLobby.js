@@ -1,3 +1,5 @@
+const Emitter = require("Emitter");
+
 cc.Class({
     extends: cc.Component,
 
@@ -12,11 +14,10 @@ cc.Class({
         },
         flag: true,
     },
-
-
-
+    
     onLoad() {
         this.playMusic();
+        this.registerSoundEvent();
     },
 
     playMusic() {
@@ -29,9 +30,26 @@ cc.Class({
     playFx() {
         if (this.flag) {
             this.fx = cc.audioEngine.play(this.soundFx, false, 1);
-        } else {
-            cc.audioEngine.stop(this.fx);
         }
     },
+    changeMusic(data) {
+        if (data) {
+            this.playMusic();
+        } else {
+            this.stopMusic();
+        }
+    },
+    changeFlag(data) {
+        this.flag = data;
+    },
+    setVoulme(data) {
+        cc.audioEngine.setVolume(this.music, data);
+    },
 
+
+    registerSoundEvent() {
+        Emitter.instance.registerEvent("onMusic", this.changeMusic.bind(this));
+        Emitter.instance.registerEvent("onFx", this.changeFlag.bind(this));
+        Emitter.instance.registerEvent("setVolume", this.setVoulme.bind(this));
+    },
 });

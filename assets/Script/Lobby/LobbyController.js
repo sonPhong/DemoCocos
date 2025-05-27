@@ -1,42 +1,40 @@
-
-
+const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        popupController: require('PopupController'),
         loginLayout: cc.Node,
         lobbyLayout: cc.Node,
     },
     onLoad() {
-       this.lobbyLayout.active = true;
-       this.loginLayout.active = false;
+        this.showLobby();
     },
-
+    showLobby() {
+        this.lobbyLayout.active = true;
+        this.loginLayout.active = false;
+    },
     showSetting() {
-        this.popupController.showSetting();
+        Emitter.instance.emit("showSetting");
     },
-
-    hideSetting() {
-        this.popupController.hideSetting();
+    showLogin() {
+        this.loginLayout.active = true;
+        this.lobbyLayout.active = false;
+        Emitter.instance.emit("hideSetting");
     },
-
-    showRank() {
-        this.popupController.showRank();
-    },
-
-    hideRank() {
-        this.popupController.hideRank();
-    },
-
-    login() {
+    toggleLogin() {
         if (this.lobbyLayout.active) {
-            this.loginLayout.active = true;
-            this.lobbyLayout.active = false;
-            this.popupController.onHidePopup();
+            this.showLogin();
         } else {
-            this.loginLayout.active = false;
-            this.lobbyLayout.active = true;
+            this.showLobby();
         }
+    },
+    hideSetting() {
+        Emitter.instance.emit("hideSetting");
+    },
+    showRank() {
+        Emitter.instance.emit("showRank");
+    },
+    hideRank() {
+        Emitter.instance.emit("hideRank");
     },
 });
