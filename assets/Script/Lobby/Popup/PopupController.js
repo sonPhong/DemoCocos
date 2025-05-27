@@ -1,3 +1,4 @@
+const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
 
@@ -6,8 +7,12 @@ cc.Class({
         popupRank: require('PopupItem'),
     },
 
+    onLoad() {
+        this.registerPopupEvents();
+    },
+
     showSetting() {
-        this.onHidePopup();
+        this.hideAllPopups();
         this.popupSetting.show();
     },
 
@@ -17,7 +22,7 @@ cc.Class({
 
     showRank() {
         this.popupRank.initTopRank();
-        this.onHidePopup();
+        this.hideAllPopups();
         this.popupRank.show();
     },
 
@@ -25,8 +30,22 @@ cc.Class({
         this.popupRank.hide();
     },
 
-    onHidePopup() {
+    hideAllPopups() {
         this.hideSetting();
         this.hideRank();
+    },
+
+    registerPopupEvents() {
+        Emitter.instance.registerEvent("showSetting", this.showSetting.bind(this));
+        Emitter.instance.registerEvent("hideSetting", this.hideSetting.bind(this));
+        Emitter.instance.registerEvent("showRank", this.showRank.bind(this));
+        Emitter.instance.registerEvent("hideRank", this.hideRank.bind(this));
+    },
+
+    onDestroy() {
+        Emitter.instance.removeEvent("showSetting", this.showSetting.bind(this));
+        Emitter.instance.removeEvent("hideSetting", this.hideSetting.bind(this));
+        Emitter.instance.removeEvent("showRank", this.showRank.bind(this));
+        Emitter.instance.removeEvent("hideRank", this.hideRank.bind(this));
     },
 });
