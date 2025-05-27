@@ -40,5 +40,12 @@ cc.Class({
         Emitter.instance.registerEvent("hideSetting", this.hideSetting.bind(this));
         Emitter.instance.registerEvent("showRank", this.showRank.bind(this));
         Emitter.instance.registerEvent("hideRank", this.hideRank.bind(this));
-    }
+    },
+
+    onDestroy() {
+        Emitter.instance.removeEvent("showSetting", this.showSetting.bind(this));
+        Emitter.instance.removeEvent("hideSetting", this.hideSetting.bind(this));
+        Emitter.instance.removeEvent("showRank", this.showRank.bind(this));
+        Emitter.instance.removeEvent("hideRank", this.hideRank.bind(this));
+    },
 });

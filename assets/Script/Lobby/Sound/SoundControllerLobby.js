@@ -14,7 +14,7 @@ cc.Class({
         },
         flag: true,
     },
-    
+
     onLoad() {
         this.playMusic();
         this.registerSoundEvent();
@@ -52,4 +52,11 @@ cc.Class({
         Emitter.instance.registerEvent("onFx", this.changeFlag.bind(this));
         Emitter.instance.registerEvent("setVolume", this.setVoulme.bind(this));
     },
+
+
+    onDestroy() {
+        Emitter.instance.removeEvent("onMusic", this.changeMusic.bind(this));
+        Emitter.instance.removeEvent("onFx", this.changeFlag.bind(this));
+        Emitter.instance.removeEvent("setVolume", this.setVoulme.bind(this));
+    }
 });
