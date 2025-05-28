@@ -1,3 +1,4 @@
+const EventKey = require('EventKey');
 const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
@@ -36,5 +37,13 @@ cc.Class({
     },
     hideRank() {
         Emitter.instance.emit("hideRank");
+    },
+
+    loadSLoad(){
+        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'Load' });
+        console.log('bắn');
+    },
+    loadSRoom(){
+        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'RoomPlay' }); 
     },
 });
