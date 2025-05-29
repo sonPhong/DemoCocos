@@ -1,3 +1,4 @@
+const EventKey = require('EventKey');
 const Emitter = require("Emitter");
 
 cc.Class({
@@ -12,12 +13,20 @@ cc.Class({
             default: null,
             type: cc.AudioClip,
         },
-        flag: true,
+        checkEnable: true,
     },
 
     onLoad() {
+        this.initEventsMap();
         this.playMusic();
         this.registerSoundEvent();
+    },
+    initEventsMap() {
+        this.eventsMap = {
+            [EventKey.ON_MUSIC_POPUP]: this.changeMusic.bind(this),
+            [EventKey.ON_SOUND_FX_POPUP]: this.enableSound.bind(this),
+            [EventKey.SET_VOLUME_SETTING_POPUP]: this.setVoulme.bind(this)
+        };
     },
 
     playMusic() {
@@ -28,7 +37,7 @@ cc.Class({
         cc.audioEngine.pause(this.music);
     },
     playFx() {
-        if (this.flag) {
+        if (this.checkEnable) {
             this.fx = cc.audioEngine.play(this.soundFx, false, 1);
         }
     },
@@ -39,8 +48,8 @@ cc.Class({
             this.stopMusic();
         }
     },
-    changeFlag(data) {
-        this.flag = data;
+    enableSound(data) {
+        this.checkEnable = data;
     },
     setVoulme(data) {
         cc.audioEngine.setVolume(this.music, data);
@@ -48,15 +57,11 @@ cc.Class({
 
 
     registerSoundEvent() {
-        Emitter.instance.registerEvent("onMusic", this.changeMusic.bind(this));
-        Emitter.instance.registerEvent("onFx", this.changeFlag.bind(this));
-        Emitter.instance.registerEvent("setVolume", this.setVoulme.bind(this));
+        Emitter.instance.registerEventsMap(this.eventsMap);
     },
 
 
     onDestroy() {
-        Emitter.instance.removeEvent("onMusic", this.changeMusic.bind(this));
-        Emitter.instance.removeEvent("onFx", this.changeFlag.bind(this));
-        Emitter.instance.removeEvent("setVolume", this.setVoulme.bind(this));
+        Emitter.instance.removeEventsMap(this.eventsMap);
     }
 });

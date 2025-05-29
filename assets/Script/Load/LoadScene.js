@@ -14,8 +14,6 @@ cc.Class({
         Emitter.instance.registerEvent(EventKey.LOAD_SCENE, this._onLoadScene);
     },
 
-
-
     onDestroy() {
         Emitter.instance.removeEvent(EventKey.LOAD_SCENE, this._onLoadScene);
     },
@@ -26,11 +24,11 @@ cc.Class({
             return;
         }
 
-        const nameS = data.name;
+        const nameScene = data.name;
         console.log(`Bắt đầu preload scene: ${nameS}`);
 
         cc.director.preloadScene(
-            nameS,
+            nameScene,
             (completedCount, totalCount) => {
                 let progress = completedCount / totalCount;
                 // this.progressBar.progress = progress;
@@ -39,8 +37,8 @@ cc.Class({
             () => {
                 this.statusLabel.string = "Tải xong!";
                 this.scheduleOnce(() => {
-                    cc.director.loadScene(nameS);
-                }, 0.3); // delay nhẹ để cảm nhận
+                    cc.director.loadScene(nameScene);
+                }, 0.3);
             }
         );
     },
