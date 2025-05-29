@@ -49,10 +49,6 @@ cc.Class({
     },
 
     die() {
-        cc.tween(this.node)
-            .to(0.4, { angle: 180 })
-            .to(0.4, { opacity: 0, y: this.node.y - 30 })
-            .call(() => this.node.destroy())
-            .start();
+
     },
 });
