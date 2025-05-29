@@ -63,5 +63,6 @@ cc.Class({
 
     onDestroy() {
         Emitter.instance.removeEventsMap(this.eventsMap);
+        this.stopMusic();
     }
 });
