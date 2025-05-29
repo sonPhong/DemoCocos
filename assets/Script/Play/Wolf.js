@@ -21,7 +21,7 @@ cc.Class({
         if(other.node.group == 'EndScene'){
             this.die();
         }if(other.node.group == 'Sword'){
-            this.takeDamage(500);
+            this.takeDamage(100);
         }
     },
 });
