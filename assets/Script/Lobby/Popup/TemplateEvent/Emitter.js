@@ -13,6 +13,16 @@ class mEmitter {
     registerOnce(event, listener) {
         this._emiter.once(event, listener);
     }
+    registerEventsMap(eventsMap) {
+        for (const event in eventsMap) {
+            this.registerEvent(event, eventsMap[event]);
+        }
+    }
+    removeEventsMap(eventsMap) {
+        for (const event in eventsMap) {
+            this.removeEvent(event, eventsMap[event]);
+        }
+    }
     removeEvent(event, listener) {
         this._emiter.removeListener(event, listener);
     }

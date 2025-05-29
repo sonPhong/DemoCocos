@@ -1,3 +1,4 @@
+const EventKey = require('EventKey');
 const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
@@ -8,7 +9,17 @@ cc.Class({
     },
 
     onLoad() {
+        this.initEventsMap();
         this.registerPopupEvents();
+    },
+
+    initEventsMap() {
+        this.eventsMap = {
+            [EventKey.SHOW_SETTING_POPUP]: this.showSetting.bind(this),
+            [EventKey.SHOW_RANK_POPUP]: this.showRank.bind(this),
+            [EventKey.HIDE_SETTING_POPUP]: this.hideSetting.bind(this),
+            [EventKey.HIDE_RANK_POPUP]: this.hideRank.bind(this)
+        };
     },
 
     showSetting() {
@@ -36,16 +47,10 @@ cc.Class({
     },
 
     registerPopupEvents() {
-        Emitter.instance.registerEvent("showSetting", this.showSetting.bind(this));
-        Emitter.instance.registerEvent("hideSetting", this.hideSetting.bind(this));
-        Emitter.instance.registerEvent("showRank", this.showRank.bind(this));
-        Emitter.instance.registerEvent("hideRank", this.hideRank.bind(this));
+        Emitter.instance.registerEventsMap(this.eventsMap);
     },
 
     onDestroy() {
-        Emitter.instance.removeEvent("showSetting", this.showSetting.bind(this));
-        Emitter.instance.removeEvent("hideSetting", this.hideSetting.bind(this));
-        Emitter.instance.removeEvent("showRank", this.showRank.bind(this));
-        Emitter.instance.removeEvent("hideRank", this.hideRank.bind(this));
+        Emitter.instance.removeEventsMap(this.eventsMap);
     },
 });

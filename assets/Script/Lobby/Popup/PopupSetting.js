@@ -1,3 +1,4 @@
+const EventKey = require('EventKey');
 const Emitter = require('Emitter');
 
 cc.Class({
@@ -21,10 +22,10 @@ cc.Class({
     },
 
     onToggleMusic(toggle) {
-        Emitter.instance.emit('onMusic', toggle.isChecked);
+        Emitter.instance.emit(EventKey.ON_MUSIC_POPUP, toggle.isChecked);
     },
     onToggleSoundFx(toggle) {
-        Emitter.instance.emit('onFx', toggle.isChecked);
+        Emitter.instance.emit(EventKey.ON_SOUND_FX_POPUP, toggle.isChecked);
     },
     openFacebook() {
         window.open('https://facebook.com', '_blank');
@@ -33,11 +34,11 @@ cc.Class({
         window.open('https://google.com', '_blank');
     },
 
-    // Create Slider Focus width of prgress
+    // Create Slider Focus width of progress
     onSliderChange() {
         let value = this.slider.progress;
         this.updateSliderVisual();
-        Emitter.instance.emit('setVolume', value);
+        Emitter.instance.emit(EventKey.SET_VOLUME_SETTING_POPUP, value);
     },
 
     updateSliderVisual() {

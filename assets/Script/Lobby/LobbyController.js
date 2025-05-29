@@ -1,3 +1,4 @@
+const EventKey = require('EventKey');
 const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
@@ -13,13 +14,11 @@ cc.Class({
         this.lobbyLayout.active = true;
         this.loginLayout.active = false;
     },
-    showSetting() {
-        Emitter.instance.emit("showSetting");
-    },
+    
     showLogin() {
         this.loginLayout.active = true;
         this.lobbyLayout.active = false;
-        Emitter.instance.emit("hideSetting");
+        Emitter.instance.emit(EventKey.HIDE_SETTING_POPUP);
     },
     toggleLogin() {
         if (this.lobbyLayout.active) {
@@ -28,13 +27,24 @@ cc.Class({
             this.showLobby();
         }
     },
+    showSetting() {
+        Emitter.instance.emit(EventKey.SHOW_SETTING_POPUP);
+    },
     hideSetting() {
-        Emitter.instance.emit("hideSetting");
+        Emitter.instance.emit(EventKey.HIDE_SETTING_POPUP);
     },
     showRank() {
-        Emitter.instance.emit("showRank");
+        Emitter.instance.emit(EventKey.SHOW_RANK_POPUP);
     },
     hideRank() {
-        Emitter.instance.emit("hideRank");
+        Emitter.instance.emit(EventKey.HIDE_RANK_POPUP);
+    },
+
+    loadSLoad(){
+        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'Load' });
+        // console.log('bắn');
+    },
+    loadSRoom(){
+        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'RoomPlay' }); 
     },
 });
