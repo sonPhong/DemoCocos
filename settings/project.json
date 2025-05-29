@@ -3,6 +3,23 @@
   "collision-matrix": [
     [
       true
+    ],
+    [
+      false,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      false
     ]
   ],
   "design-resolution-height": 720,
@@ -21,7 +38,10 @@
   "fit-height": false,
   "fit-width": false,
   "group-list": [
-    "default"
+    "default",
+    "Monster",
+    "Sword",
+    "EndScene"
   ],
   "last-module-event-record-time": 1747638794398,
   "simulator-orientation": false,
@@ -29,7 +49,6 @@
     "height": 640,
     "width": 960
   },
-  "start-scene": "05d0e415-0297-4783-9f4d-34ef44fd69c2",
   "use-customize-simulator": true,
   "use-project-simulator-setting": false
 }
