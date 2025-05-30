@@ -2,8 +2,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        worldNode: cc.Node,
         wolfPrefab: cc.Prefab,
-        enemyLayer: cc.Node,
+        montersLayer: cc.Node,
+        // swordLayer: cc.Node,
+        effcetLayer: cc.Node,
         totalWaves: 10,
         enemiesPerWave: 10,
     },
@@ -34,19 +37,29 @@ cc.Class({
     },
 
     spawnEnemy() {
-        const enemy = cc.instantiate(this.wolfPrefab);
-        enemy.parent = this.enemyLayer;
+        const monter = cc.instantiate(this.wolfPrefab);
 
-        const startX = cc.winSize.width / 2 + 100;
+        const worldAnchorPos = this.worldNode.convertToWorldSpaceAR(cc.Vec2.ZERO); // toạ độ world
 
-        const minY = -200;
-        const maxY = 200;
+        const startX = worldAnchorPos.x * 2 + 30;
+
+        const minY = (worldAnchorPos.y) - 200;
+        const maxY = (worldAnchorPos.y) + 100;
         const startY = minY + Math.random() * (maxY - minY);
 
-        enemy.setPosition(startX, startY);
 
-        const script = enemy.getComponent("Wolf");
-        console.log(this.currentWave);
+        const worldPos = cc.v2(startX, startY);
+        console.log(`world ${worldPos} - startX ${startX}`);
+
+        const localPos = this.montersLayer.convertToNodeSpaceAR(worldPos);
+
+        console.log('localMon', localPos);
+
+        monter.parent = this.montersLayer;
+        monter.setPosition(localPos);
+
+        const script = monter.getComponent("Wolf");
+        console.log(this.currentWave, monter.getPosition());
         script.init(this.currentWave);
     }
 });
