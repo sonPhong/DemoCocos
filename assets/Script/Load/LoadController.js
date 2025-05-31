@@ -7,13 +7,13 @@ cc.Class({
 
 
     },
-    loadLogin() {
+    sceneLobby() {
         Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'Lobby' });
     },
-    loadSLoad(){
+    sceneLogin() {
         Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'Load' });
     },
-    loadSRoom(){
-        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'RoomPlay' }); 
+    scenePlay() {
+        Emitter.instance.emit(EventKey.LOAD_SCENE, { name: 'RoomPlay' });
     },
 });

@@ -1106,7 +1106,7 @@
     },
     "component": "",
     "_componentId": "043a3ihA21G7KOX3G0cgaJe",
-    "handler": "loadLogin",
+    "handler": "sceneLobby",
     "customEventData": ""
   },
   {

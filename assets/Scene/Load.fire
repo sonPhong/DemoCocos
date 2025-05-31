@@ -156,7 +156,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 510.0889628290344
+      "z": 560.3184362485318
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -3117,7 +3117,7 @@
     },
     "component": "",
     "_componentId": "043a3ihA21G7KOX3G0cgaJe",
-    "handler": "loadLogin",
+    "handler": "sceneLobby",
     "customEventData": ""
   },
   {
@@ -3928,7 +3928,7 @@
     },
     "component": "",
     "_componentId": "043a3ihA21G7KOX3G0cgaJe",
-    "handler": "loadLogin",
+    "handler": "sceneLobby",
     "customEventData": ""
   },
   {
