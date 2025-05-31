@@ -1,0 +1,62 @@
+[
+    [
+        {
+            "type": "Wolf",
+            "level": 1
+        },
+        {
+            "type": "Wolf",
+            "level": 1
+        }
+    ],
+    [
+        {
+            "type": "Orc",
+            "level": 2
+        },
+        {
+            "type": "Wolf",
+            "level": 2
+        }
+    ],
+    [
+        {
+            "type": "Wolf",
+            "level": 1
+        },
+        {
+            "type": "Wolf",
+            "level": 1
+        }
+    ],
+    [
+        {
+            "type": "Orc",
+            "level": 2
+        },
+        {
+            "type": "Wolf",
+            "level": 2
+        }
+    ],
+    [
+        {
+            "type": "Wolf",
+            "level": 1
+        },
+        {
+            "type": "Wolf",
+            "level": 1
+        }
+    ],
+    [
+        {
+            "type": "Orc",
+            "level": 2
+        },
+        {
+            "type": "Wolf",
+            "level": 2
+        }
+    ]
+]
