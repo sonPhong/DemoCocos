@@ -1,3 +1,5 @@
+const EventKey = require('EventKey');
+const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
 
@@ -6,6 +8,7 @@ cc.Class({
         maxHealth: 100,
         currentHealth: 100,
         moveDuration: 5,
+        amount: 100,
     },
 
     init(level = 1) {
@@ -52,7 +55,23 @@ cc.Class({
     },
 
     onCollisionEnter(other, self) {
+        if (other.node.group == 'Sword') this.takeDamage(this.amount);
+        const pos = self.node.position;
+        const worldPos = self.node.parent.convertToWorldSpaceAR(pos);
+
+        const infoCollision = {
+            'id': this.id,
+            'type': this.type,
+            'maxHealth': this.maxHealth,
+            'currentHealth': this.currentHealth,
+            'amount': this.amount,
+            'pos': pos,
+            'worldPos': worldPos,
+        }
+
+        Emitter.instance.emit(EventKey.COLLISION_MONSTER, infoCollision);
+
         if (other.node.group == 'EndScene') this.die();
-        if (other.node.group == 'Sword') this.takeDamage(100);
+
     }
 });

@@ -10,6 +10,8 @@ const EventKey = {
     ON_SOUND_FX_POPUP: 'onSoundFxPopup',
     SET_VOLUME_SETTING_POPUP: 'setVolumeSettingPopup',
 
+    COLLISION_MONSTER: 'conllisionMonster',
+
 
 }
 

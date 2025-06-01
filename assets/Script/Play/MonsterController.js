@@ -38,5 +38,6 @@ cc.Class({
             monsterNode.destroy();
         }
         this.monsters = {};
-    }
+    },
+
 });

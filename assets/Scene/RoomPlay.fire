@@ -199,6 +199,12 @@
     "monterLayer": {
       "__id__": 31
     },
+    "effectPrefab": {
+      "__uuid__": "b2f6116d-6590-4616-9567-678233206686"
+    },
+    "effectLayer": {
+      "__id__": 39
+    },
     "_id": "ffvleO3t5Ebbnxe6q20JeF"
   },
   {
@@ -1769,8 +1775,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -1280.181,
+      "y": 784.081,
       "z": 0
     },
     "_scale": {
