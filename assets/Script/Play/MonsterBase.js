@@ -16,15 +16,14 @@ cc.Class({
 
         this.type = "";
         this.id = "";
-
-
-
     },
 
     startMoving() {
-        const endX = -cc.winSize.width / 2 + 100;
-        cc.tween(this.node)
-            .to(this.moveDuration, { x: endX })
+        this.walking = cc.tween(this.node)
+            .repeatForever(
+                cc.tween()
+                    .by(0.5, { x: -100 })
+            )
             .start();
         this.walkingTween = cc.tween(this.node)
             .repeatForever(
@@ -43,12 +42,12 @@ cc.Class({
         if (this.currentHealth <= 0) {
             this.die();
         }
-
     },
 
     die() {
-        if (this.walkingTween) {
+        if (this.walkingTween || this.walking) {
             this.walkingTween.stop();
+            this.walking.stop();
         }
     },
 
