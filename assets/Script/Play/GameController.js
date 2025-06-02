@@ -41,7 +41,14 @@ cc.Class({
 
         let effect = cc.instantiate(this.effectPrefab);
         let localPos = this.effectLayer.convertToNodeSpaceAR(worldPos);
-        effect.getChildByName('Text').getComponent(cc.Label).string = `- ${amount} hp`;
+        console.log(data.currentHealth)
+        if (data.currentHealth < 0) {
+            effect.getChildByName('Text').getComponent(cc.Label).string = " ";
+        } else {
+            effect.getChildByName('Text').getComponent(cc.Label).string = `- ${amount} hp`;
+        }
+
+        console.log(effect.getChildByName('Text').getComponent(cc.Label).string);
 
         effect.setPosition(localPos);
         this.effectLayer.addChild(effect);

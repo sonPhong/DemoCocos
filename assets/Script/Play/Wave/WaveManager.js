@@ -1,3 +1,5 @@
+const EventKey = require('EventKey');
+const Emitter = require('Emitter');
 cc.Class({
     extends: cc.Component,
 
@@ -20,6 +22,7 @@ cc.Class({
         const config = this.getWaveData(this.currentWave);
         if (!config) {
             cc.log("Hết wave!");
+            Emitter.instance.emit(EventKey.END_WAVE);
             return;
         }
 

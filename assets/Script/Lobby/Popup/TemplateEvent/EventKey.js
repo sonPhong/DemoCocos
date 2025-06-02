@@ -11,6 +11,7 @@ const EventKey = {
     SET_VOLUME_SETTING_POPUP: 'setVolumeSettingPopup',
 
     COLLISION_MONSTER: 'conllisionMonster',
+    END_WAVE: 'endWave',
 
 
 }
