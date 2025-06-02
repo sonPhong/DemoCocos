@@ -43,6 +43,7 @@ cc.Class({
         let localPos = this.effectLayer.convertToNodeSpaceAR(worldPos);
         console.log(data.currentHealth)
         if (data.currentHealth < 0) {
+            console.log('vào')
             effect.getChildByName('Text').getComponent(cc.Label).string = " ";
         } else {
             effect.getChildByName('Text').getComponent(cc.Label).string = `- ${amount} hp`;
