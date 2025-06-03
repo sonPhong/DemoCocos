@@ -1,0 +1,98 @@
+### Các Design Pattern thường dùng trong phát triển Game
+
+1 - Command Pattern: 
+    - Tách đối tượng sự kiện khỏi đối tượng thực thi sự kiện. Đóng gói các đối tượng sự kiện - hành động riêng các đối tượng thưc thi sự kiện đảm bảo liên kết (Loose coupling).
+
+    - Ứng dụng: tạo các phím tắt tưong tác chung chức năng với các phương pháp tương tác đến ứng dụng, chia nhỏ các sự kiện để có thể hoàn về bản trước đó ứng dụng cho redo.
+
+    - Cấu trúc - cách dùng: Invoker  →  Command  →  Receiver <- Client
+        + Client: Tham chiếu đến đối tượng Receiver.
+        + Receiver: Biết cách thực hiện thao tác liên quan đến command, tùy chọn, duy trì lịch sử các command đã thực thi.
+        + Command: Duy trì thông tin về hành động cần thực hiện.
+        + Invoker: Yêu cầu thực hiện request.
+
+    - Ưu điêm: 
+        + Loose coupling: Giảm sự phụ thuộc trực tiếp giữa đối tượng gửi yêu cầu và đối tượng thực thi.
+        + Cho phép tập trung hóa việc xử lý các hành động. Ví dụ, chỉ cần một Command để xử lý tất cả các yêu cầu: cut, coppy, past, redo, undo, đi tới, đi lui,...
+        + Thường được dùng làm chức năng redo undo vì tập trung được tất cả quá trình xử lý.
+
+    - Nhược điểm:
+        + Làm tăng số lượng class/object trong hệ thống.
+
+2 - Flyweight Pattern:
+    - Tối ưu RAM khi có rất nhiều đối tượng giống nhau. Tiết kiệm bộ nhớ bằng cách chia sẻ các đối tượng giống nhau, thay vì tạo mới. 
+    - Các đối tượng flyweight được chia sẻ là bất biến (immutable), chúng không thể thay đổi vì chúng đại diện cho các đặc điểm được chia sẻ với các đối tượng khác. 
+    - Về cơ bản, Flyweight là một 'kỹ thuật chuẩn hóa đối tượng' trong đó các thuộc tính chung được tách ra thành các đối tượng flyweight dùng chung.
+
+    - Ứng dụng: tạo các đối tượng con số lượng lớn có các thông tin cơ bản giống nhau
+
+    - Cấu trúc - cách dùng: 
+        + Client: Gọi đến FlyweightFactory để lấy đối tượng.
+        + FlyweightFactory: Tạo và quản lý các đối tượng flyweight.
+        + Flyweight: Duy trì thông tin riêng dùng chung để khởi tạo từ FlyweightFactory.
+
+    - Ưu điêm: 
+        + Tiết kiệm bộ nhớ: Đặc biệt hiệu quả với số lượng lớn đối tượng.
+        + Cho phép quản lý nhiều đối tượng nhỏ một cách hiệu quả.
+        + Thường được dùng làm chức năng redo undo vì tập trung được tất cả quá trình xử lý.
+
+    - Nhược điểm:
+        + Tách trạng thái nội tại (intrinsic) và trạng thái ngoại tại (extrinsic) có thể làm tăng độ phức tạp.
+        + Phức tạp hóa việc quản lý nội dung động.
+
+3 - Observer Pattern (Pub/Sub):
+    - Cung cấp một mô hình đăng ký (subscription model) trong đó các đối tượng (observers) đăng ký theo dõi một sự kiện và nhận được thông báo khi sự kiện đó xảy ra. 
+    - Đây là nền tảng của lập trình hướng sự kiện, bao gồm cả JavaScript.
+
+    - Ứng dụng: Tạo hệ thống phản ứng, không cần liên kết cứng giữa các đối tượng. Theo dõi dữ liệu realtime. Xử lý sự kiện động
+
+    - Cấu trúc - cách dùng: 
+        + Subject: 
+            + Duy trì một danh sách các observers. Bất kỳ số lượng đối tượng Observer nào cũng có thể quan sát một Subject. 
+            + Triển khai một interface cho phép các đối tượng observer đăng ký hoặc hủy đăng ký. 
+            + Gửi thông báo đến các observers của nó khi trạng thái của nó thay đổi.
+
+        + Observers: Có hàm (function signature) có thể được gọi khi Subject thay đổi (nhận được sự kiện).
+
+    - Ưu điêm: 
+        + Thiết kế hướng đối tượng tốt.
+
+    - Nhược điểm:
+        + Không quản lý cẩn thận việc hủy đăng ký, có thể dẫn đến rò rỉ bộ nhớ (memory leaks) hoặc các chuỗi cập nhật phức tạp
+
+4 - State Pattern:
+    - Cung cấp logic cụ thể theo trạng thái cho một tập hợp giới hạn các đối tượng, trong đó mỗi đối tượng đại diện cho một trạng thái cụ thể.
+
+    - Ứng dụng: Xử lý trạng thái của từng quái sinh ra, từng trạng thái tồn tại,...
+
+    - Cấu trúc - cách dùng: 
+        + Context: 
+            + Cung cấp một interface hỗ trợ client của dịch vụ. Duy trì một tham chiếu đến một đối tượng state định nghĩa trạng thái hiện tại. 
+            + Cho phép các đối tượng State thay đổi trạng thái hiện tại của nó sang một trạng thái khác
+        + State: 
+            + Đóng gói các giá trị trạng thái và hành vi liên quan của trạng thái đó. 
+            + Chính đối tượng State quyết định việc chuyển sang trạng thái tiếp theo và thay đổi trạng thái hiện tại trong Context. 
+    - Ưu điêm: 
+        + Giúp mã nguồn dễ quản lý hơn bằng cách đóng gói hành vi liên quan đến trạng thái vào các lớp riêng biệt.
+
+    - Nhược điểm:
+        + Gia tăng số lượng lớp nếu có nhiều trạng thái.
+
+5 - Singleton Pattern:
+    - Giới hạn số lượng instance (thể hiện) của một đối tượng cụ thể chỉ còn một. Instance duy nhất này được gọi là singleton dùng cho tất cả quá trình.
+
+    - Ứng dụng: 
+        + Tạo Pool quản lý việc tạo, hủy và vòng đời của tất cả các kết nối cơ sở dữ liệu cho toàn bộ ứng dụng, đảm bảo không có kết nối nào bị 'mất'.
+
+    - Cấu trúc - cách dùng: 
+        + Singleton: Định nghĩa một phương thức getInstance() trả về instance duy nhất.
+        + Kiểm tra xem một instance đã được tạo chưa, nếu chưa sẽ tạo một instance và lưu trữ để tham khảo trong tương lai
+        + Tất cả các lệnh gọi tiếp theo sẽ nhận được instance đã lưu trữ.
+
+    - Ưu điêm: 
+        + Hữu ích trong các tình huống cần điều phối các hành động trên toàn hệ thống từ một nơi trung tâm duy nhất.
+        + Giảm nhu cầu về biến toàn cục, điều này đặc biệt quan trọng trong JavaScript vì nó hạn chế ô nhiễm không gian tên (namespace pollution) và nguy cơ xung đột tên liên quan.
+        + Nếu được triển khai với Lazy Load, nó chỉ tạo đối tượng khi thực sự cần thiết, giúp tiết kiệm CPU và bộ nhớ.
+
+    - Nhược điểm:
+        + Singleton có thể gây khó khăn cho việc kiểm thử (testing), vi phạm nguyên tắc Single Responsibility, và có thể bị coi là một anti-pattern nếu lạm dụng.
