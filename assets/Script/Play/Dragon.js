@@ -11,7 +11,7 @@ cc.Class({
         this.moveDuration = 4 + Math.random();
     },
 
-    die() {
+    onEnterDead() {
         this._super();
         this.dieDog = cc.tween(this.node)
             .repeatForever(
