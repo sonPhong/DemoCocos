@@ -42,7 +42,7 @@ cc.Class({
         let effect = cc.instantiate(this.effectPrefab);
         let localPos = this.effectLayer.convertToNodeSpaceAR(worldPos);
         console.log(data.currentHealth)
-        if (data.currentHealth < 0) {
+        if (data.hpProgress < 0) {
             console.log('vào')
             effect.getChildByName('Text').getComponent(cc.Label).string = " ";
         } else {
