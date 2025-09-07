@@ -1,0 +1,22 @@
+### Research ngày 26-5
+
+1 - Size Mode
+    - Quyết định kích thước của node chứa sprite sẽ được xác định như thế nào
+    - có 3 chế độ: 
+        + CUSTOM: kích thước do mình tự đặt, khi muốn tự tuỳ chỉnh size node, dễ bóp méo vỡ hình
+        + TRIMMED: dùng kích thước trimmed trong sprite frame, khi file được cắt tự động từ atlas giữ đúng kích thước
+        + RAW: dùng đúng kích thước pixel gốc của ảnh, dùng khi muốn hiện ảnh đúng theo kích thước ban đầu
+
+    - ví dụ dùng: ảnh có size 512x256
+        + CUSTOM: tuỳ chỉnh 300x300, ảnh bị bóp méo
+        + TRIMMED: ảnh size 512x256, khi trim cắt góc thừa còn tầm ví dụ 480x200
+        + Raw: hiện full đúng size 512x256
+
+    - Khi nào dùng:
+        + CUSTOM: UI button, thanh máu, khung hình cố định → cần đặt size theo design, không phụ thuộc ảnh.
+        + TRIMMED: Khi dùng sprite trong atlas được trim tự động (để tối ưu dung lượng), và muốn khớp chính xác vùng đã cắt.
+        + RAW: Khi bạn cần show đúng kích thước ảnh PNG gốc (ví dụ background, ảnh minh họa).
+
+2 - Tại sao code sự kiện emitter không nhận sự kiện đúng?
+    theo code hiện tại chưa chuẩn singleton, khi emitter tạo 1 instance và node thừa kế nhưng tự tạo lại, thì 2 instance khác biệt không đúng nơi gọi và nhận để hiện đúng mọi chỗ
+
